@@ -9,6 +9,19 @@
     <body>
         <main id="app">
             <!-- <button @click="getParkingData()">Refresh</button> -->
+            <dl>
+                <div v-for="campus in parkingApp">
+                    <dt>{{ campus.name }}</dt>
+                    <dd v-for="garage in campus.garages">
+                        <div>
+                            <small>{{ garage.FacilityID }}</small>
+                            <h2>{{ garage.Description }}</h2>
+                        </div>
+                        <p>{{ garage.Occupancy.Available }}</p>
+                    </dd>
+                </div>
+                
+            </dl>
             <ul>
                 <li v-for="garage in parkingApp">
                     <div>

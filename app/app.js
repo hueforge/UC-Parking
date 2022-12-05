@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            requestStatus: 0,
             requestID: 0,
             garageLocations: {
                 uptownWest: [2042,2043,2044,2045,2046,2047,2048,2049,2051,2060,2061],
@@ -16,14 +17,19 @@ createApp({
     },
     computed: {
         parkingApp() {
-            const parkingApp = this.parkingData
-            parkingApp.map(el => {
-                el.Occupancy.map(occ => {if (occ.OccupancyType === "Transient") { el.Occupancy = occ }});
-                if (el.FacilityID === '2061') { el.Description = 'University Park Apartments Garage'}
-                
-            })
-            this.sortByAvailable(parkingApp)
-            return parkingApp
+            if (this.requestStatus === 1) {
+                this.parkingData.map(el => {
+                    el.Occupancy.map(occ => {if (occ.OccupancyType === "Transient") {el.Occupancy = occ}})
+                    if (el.FacilityID === '2061') {el.Description = 'University Park Apartments Garage'}
+                })
+                let parkingApp = this.parkingData
+                // let parkingApp = new Object()
+                // Object.keys(this.garageLocations).forEach(campus => {parkingApp[campus] = new Array()})
+                this.sortByAvailable(parkingApp)
+                return parkingApp.filter(el => {
+                    return parseInt(el.Occupancy.Available) > 0
+                })
+            }
         }
     },
     methods: {
@@ -61,8 +67,12 @@ createApp({
             })
         },
         getParkingData() {
+            this.requestStatus = 0
             this.jsonp('https://cso.uc.edu:3000/occupancy')
-                .then(data => {this.parkingData = data})
+                .then(data => {
+                    this.parkingData = data
+                    this.requestStatus = 1
+                })
         },
         sortByAvailable(parkingApp) {
             return parkingApp.sort((elx, ely) => {
