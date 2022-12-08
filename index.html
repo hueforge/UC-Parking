@@ -8,29 +8,18 @@
     </head>
     <body>
         <main id="app">
-            <!-- <button @click="getParkingData()">Refresh</button> -->
-            <!-- <dl>
-                <div v-for="campus in parkingApp">
-                    <dt>{{ campus.name }}</dt>
-                    <dd v-for="garage in campus.garages">
+            <div v-for="(campus) in parkingApp">
+                <h2>{{ campus.name }}</h2>
+                <ul>
+                    <li v-for="garage in campus.garages">
                         <div>
-                            <small>{{ garage.FacilityID }}</small>
-                            <h2>{{ garage.Description }}</h2>
+                            <small>{{ garage.id }}</small>
+                            <p>{{ garage.name }}</p>
                         </div>
-                        <p>{{ garage.Occupancy.Available }}</p>
-                    </dd>
-                </div>
-                
-            </dl> -->
-            <ul>
-                <li v-for="garage in parkingApp">
-                    <div>
-                        <small>{{ garage.FacilityID }}</small>
-                        <h2>{{ garage.Description }}</h2>
-                    </div>
-                    <p>{{ garage.Occupancy.Available }}</p>
-                </li>
-            </ul>
+                        <p></p>
+                    </li>
+                </ul>
+            </div>
         </main>
         <script src="app/app.js"></script>
     </body>

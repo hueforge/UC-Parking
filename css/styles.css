@@ -47,16 +47,18 @@ font-display:auto;font-style:italic;font-weight:300;font-stretch:normal;
 
 /* TYPOGRAPHY
 -------------------------------------------------------------------*/
-p {
-    font-family: "proxima-nova", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-}
-
 h2 {
     font-family: "proxima-nova", sans-serif;
     font-style: normal;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+p {
+    font-family: "proxima-nova", sans-serif;
+    font-style: normal;
     font-weight: 400;
+    
 }
 
 small {
@@ -95,10 +97,10 @@ body {
     font-size: 2rem;
 }
 
-#app ul li h2 {
+#app ul li p {
     font-size: 3rem;
 }
 
 #app ul li p {
-    font-size: 6rem;
+    
 }
