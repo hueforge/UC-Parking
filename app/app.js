@@ -1,5 +1,10 @@
 const { createApp } = Vue
 
+// LINKS
+// https://www.uc.edu/about/parking/visitors/uptown.html
+// https://www.uc.edu/about/parking/locations.html#uptown-west
+// https://www.uc.edu/about/parking/locations/maps.html
+
 createApp({
     data() {
         return {
@@ -12,57 +17,91 @@ createApp({
                     garages: [
                         {
                             id: 2042,
-                            name: 'University Ave Garage',
+                            name: 'university ave garage',
+                            address: ['40 W University Ave, Cincinnati, OH 45221'],
+                            latitute: 39.134615,
+                            longitude: -84.510986,
                             available: undefined
                         },
                         {
                             id: 2043,
-                            name: 'Corry Garage',
+                            name: 'corry garage',
                             available: undefined
                         },
                         {
                             id: 2044,
-                            name: 'Varsity Village Garage',
+                            name: 'varsity village garage',
                             available: undefined
                         },
                         {
                             id: 2045,
-                            name: 'CCM Garage',
+                            name: 'CCM garage',
+                            address: ['CCM Blvd, Cincinnati, OH 45219'],
+                            latitute: 39.129894,
+                            longitude: -84.516852,
+                            googlePlusCode: '4FHM+X5 Cincinnati, Ohio',
+                            payStation: 'lobby near garage main entrance',
+                            clearance: 'level 3 (main): 7-feet 6-inches; level 2 and below: 6-feet 10-inches',
                             available: undefined
                         },
                         {
                             id: 2046,
-                            name: 'Calhoun Garage',
+                            name: 'calhoun garage',
+                            entrances: {
+                                primary: {
+                                    name: 'calhoun st. entrance',
+                                    address: '15 Calhoun St, Cincinnati, OH 45219',
+                                    latitute: 39.12845438089837,
+                                    longitude: -84.51656896245346,
+                                    googlePlusCode: '4FHM+99 Cincinnati, Ohio',
+                                },
+                                secondary: {
+                                    name: 'dennis st. entrance',
+                                    address: '2543 Dennis St, Cincinnati, OH 45219',
+                                    latitute: 39.12910750242705,
+                                    longitude: -84.5139241176143,
+                                    googlePlusCode: '4FHP+JC Cincinnati, Ohio',
+                                },
+                                tertiary: {
+                                    name: 'corry st. entrance',
+                                    address: '125 W Corry St, Cincinnati, OH 45219',
+                                    latitute: 39.12920217234661, 
+                                    longitude: -84.5141319888143,
+                                    googlePlusCode: '4FHP+M8 Cincinnati, Ohio',
+                                }
+                            },                          
+                            payStation: 'level P1 near elevator #4',
+                            clearance: '1000 level: 7-feet 10-inches; Remaining Levels: 7-feet 5-inches',
                             available: undefined
                         },
                         {
                             id: 2047,
-                            name: 'Campus Green Garage',
+                            name: 'campus green garage',
                             available: undefined
                         },
                         {
                             id: 2048,
-                            name: 'Woodside Garage',
+                            name: 'woodside garage',
                             available: undefined
                         },
                         {
                             id: 2049,
-                            name: 'Clifton Court Garage',
+                            name: 'clifton court garage',
                             available: undefined
                         },
                         {
                             id: 2051,
-                            name: 'Stratford Garage',
+                            name: 'stratford garage',
                             available: undefined
                         },
                         {
                             id: 2060,
-                            name: 'University Ave Garage Level 1',
+                            name: 'university ave garage level 1',
                             available: undefined
                         },
                         {
                             id: 2061,
-                            name: 'University Park Apartments Garage',
+                            name: 'university park apartments garage',
                             available: undefined
                         }
                     ]
@@ -72,13 +111,13 @@ createApp({
                     garages: [
                         {
                             id: 2050,
-                            name: 'Eden Garage',
-                            available: '-'
+                            name: 'eden garage',
+                            available: undefined
                         },
                         {
                             id: 2052,
-                            name: 'Kingsgate Garage',
-                            available: '-'
+                            name: 'kingsgate garage',
+                            available: undefined
                         }
                     ]
                 }
