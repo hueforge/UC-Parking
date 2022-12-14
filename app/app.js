@@ -36,10 +36,13 @@ createApp({
                         {
                             id: 2045,
                             name: 'CCM garage',
-                            address: ['CCM Blvd, Cincinnati, OH 45219'],
-                            latitute: 39.129894,
-                            longitude: -84.516852,
-                            googlePlusCode: '4FHM+X5 Cincinnati, Ohio',
+                            entrances: {
+                                primary: {
+                                    name: 'calhoun st. entrance',
+                                    latitute: 39.12845438089837,
+                                    longitude: -84.51656896245346,
+                                }
+                            },
                             payStation: 'lobby near garage main entrance',
                             clearance: 'level 3 (main): 7-feet 6-inches; level 2 and below: 6-feet 10-inches',
                             available: undefined
