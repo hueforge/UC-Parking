@@ -10,6 +10,7 @@ createApp({
         return {
             requestStatus: false,
             requestID: 0,
+            appleMaps: true,
             parkingData: [],
             garageInfo: [
                 {

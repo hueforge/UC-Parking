@@ -9,13 +9,15 @@
     <body>
         <main id="app">
             <div v-for="(campus) in parkingApp">
+
                 <h2>{{ campus.name }}</h2>
                 <ul>
                     <li v-for="garage in campus.garages">
                         <div>
                             <small>{{ garage.id }}</small>
                             <p>{{ garage.name }}</p>
-                            <a v-for="entrance in garage.entrances" :href="'https://www.google.com/maps/search/?api=1&query=' + entrance.latitude + ',' + entrance.longitude" target="_blank">{{ entrance.name }}</a>
+                            <a v-if="!appleMaps" v-for="entrance in garage.entrances" :href="'https://www.google.com/maps/search/?api=1&query=' + entrance.latitude + ',' + entrance.longitude" target="_blank">{{ entrance.name }}</a>
+                            <a v-if="appleMaps" v-for="entrance in garage.entrances" :href="'https://maps.apple.com/maps?ll=' + entrance.latitude + ',' + entrance.longitude" target="_blank">{{ entrance.name }}</a>
                         </div>
                         <p>{{ garage.available }}</p>
                     </li>
