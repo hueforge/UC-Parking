@@ -15,6 +15,7 @@
                         <div>
                             <small>{{ garage.id }}</small>
                             <p>{{ garage.name }}</p>
+                            <a v-for="entrance in garage.entrances" :href="'geo:' + entrance.latitude + ',' + entrance.longitude" target="_blank">{{ entrance.name }}</a>
                         </div>
                         <p>{{ garage.available }}</p>
                     </li>

@@ -21,12 +21,12 @@ createApp({
                             entrances: [
                                 {
                                     name: 'corry blvd entrance',
-                                    latitute: 39.12933373070052,
+                                    latitude: 39.12933373070052,
                                     longitude: -84.51288862695665
                                 },
                                 {
                                     name: 'classen st entrance',
-                                    latitute: 39.128723123928545,
+                                    latitude: 39.128723123928545,
                                     longitude: -84.51299785637289
                                 }
                             ],
@@ -40,7 +40,7 @@ createApp({
                             entrances: [
                                 {
                                     name: 'varsity village dr entrance',
-                                    latitute: 39.13018764764033,
+                                    latitude: 39.13018764764033,
                                     longitude: -84.51602214035846
                                 }
                             ],
@@ -54,7 +54,7 @@ createApp({
                             entrances: [
                                 {
                                     name: 'corry blvd entrance',
-                                    latitute: 39.12975928116998,
+                                    latitude: 39.12975928116998,
                                     longitude:  -84.51654705913514
                                 }
                             ],
@@ -68,17 +68,17 @@ createApp({
                             entrances: [
                                 {
                                     name: 'calhoun st entrance',
-                                    latitute: 39.12845438089837,
+                                    latitude: 39.12845438089837,
                                     longitude: -84.51656896245346
                                 },
                                 {
                                     name: 'dennis st entrance',
-                                    latitute: 39.12910750242705,
+                                    latitude: 39.12910750242705,
                                     longitude: -84.5139241176143
                                 },
                                 {
                                     name: 'corry st entrance',
-                                    latitute: 39.12920217234661,
+                                    latitude: 39.12920217234661,
                                     longitude: -84.5141319888143
                                 }
                             ],
@@ -92,12 +92,12 @@ createApp({
                             entrances: [
                                 {
                                     name: 'campus green dr entrance',
-                                    latitute: 39.135352726018496,
+                                    latitude: 39.135352726018496,
                                     longitude: -84.51390106981378
                                 },
                                 {
                                     name: 'woodside drive entrance',
-                                    latitute: 39.13469836091519,
+                                    latitude: 39.13469836091519,
                                     longitude: -84.51489469106572
                                 }
                             ],
@@ -111,7 +111,7 @@ createApp({
                             entrances: [
                                 {
                                     name: 'woodside drive entrance',
-                                    latitute: 39.13500598950055,
+                                    latitude: 39.13500598950055,
                                     longitude: -84.51491614802495
                                 }
                             ],
@@ -125,7 +125,7 @@ createApp({
                             entrances: [
                                 {
                                     name: 'clifton ct entrance',
-                                    latitute: 39.134239703633554,
+                                    latitude: 39.134239703633554,
                                     longitude: -84.51768884292908
                                 }
                             ],
@@ -144,17 +144,17 @@ createApp({
                             entrances: [
                                 {
                                     name: 'eden ave entrance',
-                                    latitute: 39.13762378519983,
+                                    latitude: 39.13762378519983,
                                     longitude: -84.50538302581167
                                 },
                                 {
                                     name: 'panzeca way entrance (west)',
-                                    latitute: 39.137693843754825,
+                                    latitude: 39.137693843754825,
                                     longitude: -84.50669779046099
                                 },
                                 {
                                     name: 'panzeca way entrance (north)',
-                                    latitute: 39.13870673818666,
+                                    latitude: 39.13870673818666,
                                     longitude: -84.5057405374213
                                 }
                             ],
@@ -168,7 +168,7 @@ createApp({
                             entrances: [
                                 {
                                     name: 'goodman st entrance',
-                                    latitute: 39.13687257444297,
+                                    latitude: 39.13687257444297,
                                     longitude: -84.50778269148674
                                 }
                             ],
@@ -248,15 +248,3 @@ createApp({
         }
     },
 }).mount('#app')
-
-// this.parkingData.map(el => {
-//     el.Occupancy.map(occ => {if (occ.OccupancyType === "Transient") {el.Occupancy = occ}})
-//     if (el.FacilityID === '2061') {el.Description = 'University Park Apartments Garage'}
-// })
-// let parkingApp = this.parkingData
-// // let parkingApp = new Object()
-// // Object.keys(this.garageLocations).forEach(campus => {parkingApp[campus] = new Array()})
-// this.sortByAvailable(parkingApp)
-// return parkingApp.filter(el => {
-//     return parseInt(el.Occupancy.Available) > 0
-// })
