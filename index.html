@@ -17,7 +17,7 @@
                             <small>{{ garage.id }}</small>
                             <p>{{ garage.name }}</p>
                             <a v-if="!appleMaps" v-for="entrance in garage.entrances" :href="'https://www.google.com/maps/search/?api=1&query=' + entrance.latitude + ',' + entrance.longitude" target="_blank">{{ entrance.name }}</a>
-                            <a v-if="appleMaps" v-for="entrance in garage.entrances" :href="'https://maps.apple.com/maps?q=' + entrance.latitude + ',' + entrance.longitude" target="_blank">{{ entrance.name }}</a>
+                            <a v-if="appleMaps" v-for="entrance in garage.entrances" :href="'https://maps.apple.com/maps?q=' + entrance.name + '&ll=' + entrance.latitude + ',' + entrance.longitude" target="_blank">{{ entrance.name }}</a>
                         </div>
                         <p>{{ garage.available }}</p>
                     </li>
