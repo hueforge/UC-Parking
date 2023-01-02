@@ -47,36 +47,54 @@ font-display:auto;font-style:italic;font-weight:300;font-stretch:normal;
 
 /* TYPOGRAPHY
 -------------------------------------------------------------------*/
-h2 {
+h1,h2 {
     font-family: "proxima-nova", sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 4rem;
 }
 
 p {
     font-family: "proxima-nova", sans-serif;
     font-style: normal;
-    font-weight: 400;
-    
 }
 
 small {
     font-family: "proxima-nova", sans-serif;
     font-style: italic;
-    font-weight: 300;
 }
 
-p,h2,small {
+p,h1,h2,small {
     color: #fff;
 }
 
-/* APP
+/* MAIN
 -------------------------------------------------------------------*/
 body {
     background-color: #111;
+    padding: .5rem 1rem;
 }
 
+/* MAIN > HEADER
+-------------------------------------------------------------------*/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.header img {
+    width: 100px;
+    height: 100px;
+}
+
+.header h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+/* MAIN > APP
+-------------------------------------------------------------------*/
 #app ul {
     display: grid;
     grid-template-columns: 1fr;
@@ -91,6 +109,12 @@ body {
     border-radius: 2rem;
     border: #fff 5px solid;
     padding: 1rem 2rem;
+}
+
+#app h2 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    padding: 1rem 0;
 }
 
 #app ul li small {

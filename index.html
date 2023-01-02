@@ -8,8 +8,12 @@
     </head>
     <body>
         <main id="app">
+            <div class="header">
+                <img src="img/uc-logo.png" alt="University of Cincinnati Logo">
+                <h1>Parking Garage Availability</h1>
+            </div>
+            
             <div v-for="(campus) in parkingApp">
-
                 <h2>{{ campus.name }}</h2>
                 <ul>
                     <li v-for="garage in campus.garages">
